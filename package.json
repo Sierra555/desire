@@ -1,18 +1,17 @@
 {
   "devDependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
-    "browser-sync": "^2.27.9",
-    "gulp-imagemin": "^4.1.0",
+    "browser-sync": "^2.29.3",
+    "gulp-imagemin": "^8.0.0",
     "gulp-sass": "^5.1.0",
     "mixitup": "^3.3.1",
-    "sass": "^1.52.1",
+    "sass": "^1.62.0",
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
-    "@fancyapps/ui": "^4.0.26",
+    "@fancyapps/ui": "^4.0.30",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-uglify-es": "^3.0.0",
     "gulp-update": "^0.0.2"

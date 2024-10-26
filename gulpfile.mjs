@@ -6,7 +6,7 @@ import uglify from 'gulp-uglify-es';
 import autoprefixer from 'gulp-autoprefixer';
 import imagemin, {gifsicle, mozjpeg, optipng, svgo} from 'gulp-imagemin';
 import browserSync from 'browser-sync';
-import { deleteAsync } from 'del';
+import del from 'del';
 
 const scss = gulpSass(sass);
 const browserSyncInstance = browserSync.create();
@@ -20,7 +20,7 @@ function serve() {
 }
 
  async function clean() {
-  return await deleteAsync(['./dist/**', '!./dist/images/**']);
+  return await del(['./dist/**', '!./dist/images/**']);
 }
 
 function images() {
