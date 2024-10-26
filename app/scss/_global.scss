@@ -1,9 +1,9 @@
 html,
 body {
 	height: 100%;
-  font-family: 'Open Sans',sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
-color:$default;
+	color: $default;
 	font-weight: 16px;
 	line-height: 28px;
 }
@@ -17,42 +17,57 @@ color:$default;
 .main {
 	flex: 1 0 auto;
 }
+
 .footer {
 	flex: 0 0 auto;
 }
 
-.container{
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
-.container-fluid{
+
+.container-fluid {
 	max-width: 1920px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
 
-.slick-dots {display: flex;
-justify-content: center;
-align-items:center;
-margin-left:155px;
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 155px;
 
-li{margin: 0 12px;
+	li {
+		margin: 0 12px;
+	}
+	button {
+		background-color: $title;
+		width: 10px;
+		height: 10px;
+		border: none;
+		border-radius: 50%;
+		padding: 0;
+		margin-right: 30px;
+		font-size: 0;
+	}
+	li.slick-active {
+		button {
+			background-color: #ffef35;
+		}
+	}
 }
-button{background-color:$title;
-width: 10px;
-height: 10px;
-border:none;
-border-radius:50%;
-padding: 0;
-margin-right: 30px;
-font-size: 0;}
-li.slick-active{
-button {
-	background-color: #FFEF35;
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
-}}
-
-
-
-
