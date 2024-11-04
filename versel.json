@@ -1,0 +1,10 @@
+{
+    "rewrites": [
+      { "source": "/gallery", "destination": "/dist/pages/gallery.html" },
+      { "source": "/about", "destination": "/dist/pages/about.html" },
+      { "source": "/blog", "destination": "/dist/pages/blog.html" },
+      { "source": "/contact", "destination": "/dist/pages/contact.html" },
+      { "source": "/", "destination": "/dist/index.html" }
+    ]
+  }
+  

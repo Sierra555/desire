@@ -67,12 +67,10 @@ function scripts() {
 
 function building() {
   return gulp.src([
-    'app/css/style.min.css',
-    'app/js/main.min.js',
     'app/*.html',
     'app/pages/*.html'
-  ], {base: 'app'})
-    .pipe(gulp.dest('dist'))
+  ], { base: 'app' })
+    .pipe(gulp.dest('dist'));
 }
 
 function watching() {
