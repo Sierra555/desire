@@ -14,7 +14,7 @@ const browserSyncInstance = browserSync.create();
 function serve() {
   browserSyncInstance.init({
     server: {
-      baseDir: 'app/'
+      baseDir: 'dist/'
     }
   });
 }
@@ -46,14 +46,14 @@ function images() {
 }
 
 function styles() {
-  return gulp.src('app/scss/style.scss')
+  return gulp.src(['app/scss/style.scss', 'app/css/slick.css'])
       .pipe(scss({outputStyle: 'compressed',}))
       .pipe(concat('style.min.css'))
       .pipe(autoprefixer({
         overrideBrowserslist: ['last 10 version'],
         grid: true
       }))
-      .pipe(gulp.dest('app/css'))
+      .pipe(gulp.dest('dist/css'))
       .pipe(browserSyncInstance.stream())
 }
 
@@ -61,16 +61,16 @@ function scripts() {
   return gulp.src(['app/js/main.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify.default())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(browserSyncInstance.stream());
 }
-
 
 function building() {
   return gulp.src([
     'app/css/style.min.css',
     'app/js/main.min.js',
-    'app/*.html'
+    'app/*.html',
+    'app/pages/*.html'
   ], {base: 'app'})
     .pipe(gulp.dest('dist'))
 }
@@ -79,7 +79,7 @@ function watching() {
   gulp.watch('app/scss/**/*.scss', styles);
   gulp.watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   gulp.watch('app/images/**/*', images);
-  gulp.watch('app/*.html').on('change', browserSyncInstance.reload);
+  gulp.watch(['app/*.html', 'app/pages/*.html']).on('change', browserSyncInstance.reload);
 }
 
 
