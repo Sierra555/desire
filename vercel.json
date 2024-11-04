@@ -1,10 +1,9 @@
 {
-    "rewrites": [
-      { "source": "/gallery", "destination": "/dist/pages/gallery.html" },
-      { "source": "/about", "destination": "/dist/pages/about.html" },
-      { "source": "/blog", "destination": "/dist/pages/blog.html" },
-      { "source": "/contact", "destination": "/dist/pages/contact.html" },
-      { "source": "/", "destination": "/dist/index.html" }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/blog", "destination": "/blog.html" }
+  ]
+}
